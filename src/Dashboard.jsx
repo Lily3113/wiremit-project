@@ -37,7 +37,8 @@ const Dashboard = () => {
           <NavLink to="/dashboard">
             <img src="/wiremit-logo.png" alt="Wiremit Logo" className="logo" />
           </NavLink>
-        </div>
+              </div>
+              
         <ul className="nav-links">
           <li><NavLink to="/dashboard">Dashboard</NavLink></li>
           <li><NavLink to="/send-money">Send Money</NavLink></li>

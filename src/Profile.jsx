@@ -6,7 +6,7 @@ import { useAuth } from './AuthContext';
 import Footer from './Footer';
 import './App.css';
 import './App.css';
-import { FaUserCircle } from 'react-icons/fa'; // Import profile icon
+import { FaUserCircle } from 'react-icons/fa'; 
 
 const Profile = () => {
     const { user } = useAuth();
@@ -21,7 +21,7 @@ const Profile = () => {
         }
     };
 
-    // Mock username (you might fetch this from a database in a real application)
+   
     const username = user ? user.email.split('@')[0] : 'Guest';
 
     return (
@@ -44,8 +44,8 @@ const Profile = () => {
             <div className="main-content">
                 <div className="profile-card">
                     <div className="profile-header">
-                        <FaUserCircle className="profile-icon" /> {/* Profile Icon */}
-                        <h2>{username}</h2> {/* Display Username */}
+                        <FaUserCircle className="profile-icon" /> 
+                        <h2>{username}</h2> 
                     </div>
                     <div className="profile-details">
                         <div className="detail-item">
