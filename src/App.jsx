@@ -4,7 +4,8 @@ import { AuthProvider, useAuth } from './AuthContext';
 import Auth from './Auth';
 import Dashboard from './Dashboard';
 import SendMoney from './SendMoney';
-import Transactions from './Transactions'; // New import
+import Transactions from './Transactions';
+import Profile from './Profile'; // New import
 
 // A component to protect routes that require authentication
 const ProtectedRoute = ({ children }) => {
@@ -35,7 +36,6 @@ const App = () => {
               </ProtectedRoute>
             } 
           />
-          {/* Route for Send Money page */}
           <Route 
             path="/send-money" 
             element={
@@ -44,12 +44,20 @@ const App = () => {
               </ProtectedRoute>
             } 
           />
-          {/* New route for Transactions page */}
           <Route 
             path="/transactions" 
             element={
               <ProtectedRoute>
                 <Transactions />
+              </ProtectedRoute>
+            } 
+          />
+          {/* New route for the Profile page */}
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <Profile />
               </ProtectedRoute>
             } 
           />

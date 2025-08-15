@@ -3,6 +3,7 @@ import { useNavigate, NavLink } from 'react-router-dom';
 import { auth } from './firebase-config';
 import { signOut } from 'firebase/auth';
 import { useAuth } from './AuthContext';
+import Footer from './Footer';
 import './App.css';
 import './App.css';
 import { fetchFxRates } from './fxService';
@@ -108,10 +109,12 @@ const SendMoney = () => {
         <div className="navbar-logo">
           <img src="/wiremit-logo.png" alt="Wiremit Logo" className="logo" />
         </div>
-        <ul className="nav-links">
+              <ul className="nav-links">
+                  <li><NavLink to="/dashboard">Dashboard</NavLink></li>
           <li><NavLink to="/send-money">Send Money</NavLink></li>
-          <li><NavLink to="/transactions">Transactions</NavLink></li>
-          <li><a href="#profile">Profile</a></li>
+                  <li><NavLink to="/transactions">Transactions</NavLink></li>
+                  <li><NavLink to="/profile">Profile</NavLink></li>
+          
         </ul>
         <button onClick={handleLogout} className="logout-button">
           Log Out
@@ -197,7 +200,8 @@ const SendMoney = () => {
             </button>
           </form>
         </div>
-      </div>
+          </div>
+          <Footer />
     </>
   );
 };
