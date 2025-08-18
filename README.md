@@ -1,67 +1,67 @@
-Wiremit: Send Pocket Money App
-Project Brief
-This project is a technical interview assignment to build a web application for Zimbabwean parents to send pocket money to their children studying in the UK or South Africa. The app includes a mock account creation and login system, a dashboard with money transfer functionality, a mock ad carousel, and a transaction history section.
-
-The application is built with a focus on clean UI/UX, mobile responsiveness, and client-side validation, as outlined in the project requirements.
+Wiremit: A Modern Money Transfer Application
+Overview
+This project is a single-page React application designed to simulate a modern money transfer service. The application, named Wiremit, is built with a focus on a clean, responsive user interface and a clear user experience.
 
 Features
-Mock Account Creation: A sign-up form to create a mock user account with a username, email, and password.
+Authentication: Users can sign up, log in, and log out securely. This is handled using Firebase Authentication.
 
-Mock Login: A login form to authenticate users based on their mock credentials.
+Responsive Navigation: The application includes a responsive navigation bar that transforms into a hamburger menu on smaller screens for a better mobile experience.
 
-Multi-page Routing: The app is structured with separate pages for login and the dashboard using react-router-dom.
+Dashboard: A personalized dashboard welcomes the authenticated user. It includes a dynamic carousel for displaying promotional content or advertisements.
 
-Dashboard: A central hub with three main sections:
-
-Top Cards: Three cards to display key financial information.
-
-Send Money: A form to calculate currency conversions and fees.
-
-Mock Transaction History: A list of past transactions with pagination.
-
-Responsive Design: The layout is built to be responsive and usable on various screen sizes, from mobile phones to desktop computers.
+Real-time Data: The application is built to handle real-time data flow, with components and state management set up for future integration with a back-end service.
 
 Technology Stack
-Frontend Framework: React
+Frontend:
 
-Routing: react-router-dom
+React.js: The core JavaScript library for building the user interface.
 
-Styling: Custom CSS
+React Router: For handling navigation between different pages/components.
 
-API Integration: Fetching FX rates from a mock API endpoint.
+CSS: Custom stylesheets (.css files) are used for styling and responsiveness.
 
-Installation and Running the Project
-Clone the repository:
+Backend (Mock):
 
-git clone [your-repo-link]
+Firebase Authentication: Used for user sign-up and login.
+
+Setup and Installation
+To run this project locally, you will need to have Node.js and npm installed on your machine.
+
+Clone the repository (if applicable):
+
+git clone [repository-url]
 cd wiremit-app
 
 Install dependencies:
 
 npm install
 
-Start the development server:
+Run the application:
 
 npm start
 
-The application will be available at http://localhost:3000.
+This will launch the application in your default web browser at http://localhost:3000.
 
-Design & Technical Decisions
-UI/UX: The design uses a clean, modern aesthetic with a light theme and a white form card. The visual style is centered around the Wiremit brand's green, blue-gray, and secondary gray colors. The wave background adds a unique and dynamic touch to the authentication pages.
+Project Structure
+src/App.js: The main component that sets up the React Router for the application.
 
-Routing: react-router-dom was chosen for its simplicity and efficiency in creating a Single Page Application (SPA) with distinct "pages" for a better user experience.
+src/components/Dashboard.jsx: The main user dashboard component.
 
-State Management: For this project's scale, React's built-in useState and useEffect hooks are a suitable choice for managing local component state.
+src/components/Login.jsx: The login and sign-up component.
 
-Mock Account Storage: Mock user credentials will be stored in the browser's localStorage for persistence between reloads. In a real-world scenario, this would be handled by a secure backend and database. This decision was made to meet the "no persistence" requirement in the brief while also providing a functional demonstration.
+src/components/Footer.jsx: A reusable footer component.
 
-Client-Side Validation: Form inputs will be validated on the client side to provide immediate feedback to the user, improving the overall user experience.
+src/firebase-config.js: Configuration file for Firebase services.
 
-Future Enhancements
-User Authentication: Transition from mock authentication to a real backend service for secure user management.
+src/App.css & src/Dashboard.css: Custom CSS files for styling.
 
-Dashboard Features: Implement the FX rates API to perform live calculations and build a fully functional carousel and pagination for the transaction history.
+Next Steps
+This is a foundation for a full-fledged application. Future enhancements could include:
 
-Security: Enhance security by handling API keys securely and implementing more robust protection against common vulnerabilities.
+Integrating with a real back-end to handle actual money transfer logic and user data storage.
 
-Scalability: The component-based architecture is designed to easily scale for more countries, currencies, and additional dashboard features in the future.
+Adding more pages for "Send Money" and "Transactions" with their respective functionalities.
+
+Implementing a more robust state management solution (e.g., Redux or Context API) for larger-scale data.
+
+Adding unit and end-to-end tests to ensure code reliability.
