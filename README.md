@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+Wiremit: Send Pocket Money App
+Project Brief
+This project is a technical interview assignment to build a web application for Zimbabwean parents to send pocket money to their children studying in the UK or South Africa. The app includes a mock account creation and login system, a dashboard with money transfer functionality, a mock ad carousel, and a transaction history section.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The application is built with a focus on clean UI/UX, mobile responsiveness, and client-side validation, as outlined in the project requirements.
 
-## Available Scripts
+Features
+Mock Account Creation: A sign-up form to create a mock user account with a username, email, and password.
 
-In the project directory, you can run:
+Mock Login: A login form to authenticate users based on their mock credentials.
 
-### `npm start`
+Multi-page Routing: The app is structured with separate pages for login and the dashboard using react-router-dom.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dashboard: A central hub with three main sections:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Top Cards: Three cards to display key financial information.
 
-### `npm test`
+Send Money: A form to calculate currency conversions and fees.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Mock Transaction History: A list of past transactions with pagination.
 
-### `npm run build`
+Responsive Design: The layout is built to be responsive and usable on various screen sizes, from mobile phones to desktop computers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Technology Stack
+Frontend Framework: React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Routing: react-router-dom
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Styling: Custom CSS
 
-### `npm run eject`
+API Integration: Fetching FX rates from a mock API endpoint.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Installation and Running the Project
+Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone [your-repo-link]
+cd wiremit-app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application will be available at http://localhost:3000.
 
-### Code Splitting
+Design & Technical Decisions
+UI/UX: The design uses a clean, modern aesthetic with a light theme and a white form card. The visual style is centered around the Wiremit brand's green, blue-gray, and secondary gray colors. The wave background adds a unique and dynamic touch to the authentication pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Routing: react-router-dom was chosen for its simplicity and efficiency in creating a Single Page Application (SPA) with distinct "pages" for a better user experience.
 
-### Analyzing the Bundle Size
+State Management: For this project's scale, React's built-in useState and useEffect hooks are a suitable choice for managing local component state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Mock Account Storage: Mock user credentials will be stored in the browser's localStorage for persistence between reloads. In a real-world scenario, this would be handled by a secure backend and database. This decision was made to meet the "no persistence" requirement in the brief while also providing a functional demonstration.
 
-### Making a Progressive Web App
+Client-Side Validation: Form inputs will be validated on the client side to provide immediate feedback to the user, improving the overall user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Future Enhancements
+User Authentication: Transition from mock authentication to a real backend service for secure user management.
 
-### Advanced Configuration
+Dashboard Features: Implement the FX rates API to perform live calculations and build a fully functional carousel and pagination for the transaction history.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Security: Enhance security by handling API keys securely and implementing more robust protection against common vulnerabilities.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Scalability: The component-based architecture is designed to easily scale for more countries, currencies, and additional dashboard features in the future.
